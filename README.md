@@ -34,7 +34,7 @@ This application is based on the following tools/libraries:
 - Progarmming Language: **TypeScript**.
 - UI Render: **React/Redux, Material UI**.
 - Bundler: **Webpack**.
-- Lint check: **ESlint, eslint-config-airbnb**.
+- Lint check: **ESlint, eslint-config-airbnb-typescript**.
 - Unit Testing: **Jest**.
 - Web Server: **Express**.
 
@@ -67,11 +67,11 @@ All projects are covered with `eslint` rules to ESS standard in `eslint-config-a
 
 ### Unit tests
 
-Specs for Unit Test all locate `src/tests/unit` and all the test files like `__tests__/*.test.jsx`.
+Specs for Unit Test all locate `src/tests/unit` and all the test files like `__tests__/*.test.tsx`.
 
 1. Switch to top level directory.
 2. Run `yarn test` to start the Unit Test.
-3. Review `tests/out` for the reports.
+3. Review `src/tests/out` for the reports.
 
 ---
 

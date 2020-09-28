@@ -7,11 +7,10 @@ import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { makeStyles } from '@material-ui/core/styles';
 import { formatPrice } from '../../utils';
+import { Product } from '../../types';
 import styles from './styles';
 
-export interface Props {
-  name: string;
-  price?: number;
+export interface Props extends Product {
   onAdd?: () => void;
 }
 
@@ -36,7 +35,6 @@ const ProductCard = (props: Props): JSX.Element => {
 };
 
 ProductCard.defaultProps = {
-  price: 0,
   onAdd: () => {},
 };
 

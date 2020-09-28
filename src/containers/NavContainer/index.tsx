@@ -8,11 +8,11 @@ import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { CartProduct } from '../../types';
 import styles from './styles';
 
 interface Props {
-  cartProducts: ProductCardInfo[];
+  cartProducts: Array<CartProduct>;
 }
 
 const useStyles = makeStyles(styles);

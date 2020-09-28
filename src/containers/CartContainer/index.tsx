@@ -12,11 +12,12 @@ import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 import { makeStyles } from '@material-ui/core/styles';
 import { removeProductFromCart } from '../../actions';
 import { formatPrice } from '../../utils';
+import { CartProduct } from '../../types';
 
 import styles from './styles';
 
 interface Props {
-  cartProducts: ProductCardInfo[];
+  cartProducts: Array<CartProduct>;
   removeProductFromCart: () => void;
 }
 

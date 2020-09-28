@@ -1,10 +1,12 @@
 import { AppAction, ActionType } from '../constants';
 import { getCartFromLocalStorage } from '../utils';
+import { Product, CartProduct } from '../types';
 
-interface State {
-  products: [];
-  cartProducts: [];
+export interface State {
+  products: Array<Product>;
+  cartProducts: Array<CartProduct>;
 }
+
 export const INITIAL_STATE: State = {
   products: [],
   cartProducts: getCartFromLocalStorage() || [],
@@ -14,7 +16,7 @@ export default (state = INITIAL_STATE, action: AppAction): State => {
     case ActionType.PRODUCTS_LOAD_DATA: {
       return {
         ...state,
-        products: action.data.map(({ id, name, price }) => ({
+        products: action.data.map(({ id, name, price }: Product) => ({
           id,
           name,
           price,

@@ -3,12 +3,13 @@ import { connect } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { fetchProducts, addProductToCart } from '../../actions';
-import ProductCard, { Props as ProductCardInfo } from '../../components/ProductCard';
+import ProductCard from '../../components/ProductCard';
+import { Product } from '../../types';
 
 import styles from './styles';
 
 interface Props {
-  products: ProductCardInfo[];
+  products: Array<Product>;
   fetchProducts: () => void;
   addProductToCart: () => void;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -16,7 +16,7 @@ interface Props {
 
 const useStyles = makeStyles(styles);
 
-const CartContainer = (props: Props): JSX.Element => {
+const CartContainer = (props: Props): FunctionComponent => {
   const { products } = props;
   const classes = useStyles(props);
   useEffect(() => {

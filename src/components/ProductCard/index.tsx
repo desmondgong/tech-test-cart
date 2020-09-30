@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -16,7 +16,7 @@ export interface Props extends Product {
 
 const useStyles = makeStyles(styles);
 
-const ProductCard = (props: Props): JSX.Element => {
+const ProductCard = (props: Props): ReactElement => {
   const { name, price, onAdd } = props;
   const classes = useStyles(props);
   return (

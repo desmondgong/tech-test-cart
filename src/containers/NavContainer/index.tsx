@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
@@ -17,7 +17,7 @@ interface Props {
 
 const useStyles = makeStyles(styles);
 
-const NavContainer = (props: Props): JSX.Element => {
+const NavContainer = (props: Props): FunctionComponent => {
   const { cartProducts } = props;
   const count = cartProducts.reduce((total, { quantity }) => total + quantity, 0);
   const classes = useStyles(props);

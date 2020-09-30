@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { connect } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 import Table from '@material-ui/core/Table';
@@ -23,7 +23,7 @@ interface Props {
 
 const useStyles = makeStyles(styles);
 
-const CartContainer = (props: Props): JSX.Element => {
+const CartContainer = (props: Props): ReactElement => {
   const { cartProducts } = props;
   const classes = useStyles(props);
   const totalAmount = cartProducts.reduce(

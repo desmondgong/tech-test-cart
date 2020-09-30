@@ -1,6 +1,6 @@
 import { CartProduct } from '../types';
 
-export const formatPrice = (price: number): string => `$${Number(price).toFixed(2)}`;
+export const formatPrice = (price: any): string => `$${Number(price).toFixed(2)}`;
 
 export const getCartFromLocalStorage = (): Array<CartProduct> => {
   return JSON.parse(localStorage.getItem('cartProducts')) || [];
